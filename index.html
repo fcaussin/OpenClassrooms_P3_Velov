@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Réservez votre Vélo'v d'un simple clic !! Simple et rapide, choisissez votre station, réservez et profitez de votre Vélo'v.">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="fontawesome/web-fonts-with-css/css/fontawesome-all.min.css">
+    <link rel="icon" href="images/velov.ico">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Réservation de Vélo'v dans Lyon</title>
+  </head>
+  <body>
+  <div class="bloc_page">
+
+
+    <!-- HEADER -->
+
+    <header id="header">
+      <h1>Vélo'<span>V</span></h1>
+      <p>Réservation de vélo en libre service dans Lyon</p>
+    </header>
+
+
+    <!-- SLIDER -->
+
+    <section id="slider-inner">
+      <h2><u>Mode d'emploi</u></h2>
+
+      <!-- Conteneur du slider -->
+      <div id="slider">
+        <!-- Slide_1 image + texte -->
+        <div class="etape">
+          <div class="image-slider">
+            <img src="./images/etape1.png" alt="click sur marqueur">
+          </div>
+          <div class="text-slider">
+            <h3>Etape 1</h3>
+            <p>Cliquez sur un marqueur pour afficher les stations disponibles de la zone.</p>
+          </div>
+        </div>
+        <!-- Slide_2 image + texte -->
+        <div class="etape">
+          <div class="image-slider">
+            <img src="./images/etape2.png" alt="détails station">
+          </div>
+          <div class="text-slider">
+            <h3>Etape 2</h3>
+            <p>Sélectionnez une station pour afficher ses informations et commencer votre réservation en cliquant sur "Réserver".</p>
+          </div>
+        </div>
+        <!-- Slide_3 image + texte -->
+        <div class="etape">
+          <div class="image-slider">
+            <img src="./images/etape3.png" alt="signature et valider">
+          </div>
+          <div class="text-slider">
+            <h3>Etape 3</h3>
+            <p>Après avoir signé, confirmez votre réservation en cliquant sur "Valider".</p>
+          </div>
+        </div>
+        <!-- Slide_4 image + texte -->
+        <div class="etape">
+          <div class="image-slider">
+            <img src="./images/etape4.png" alt="réservation">
+          </div>
+          <div class="text-slider">
+            <h3>Etape 4</h3>
+            <p>Votre vélo est réservé pour 20 minutes, mais vous pouvez l'annuler à tout moment.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bouton du slider -->
+      <span class="bouton-slider" id="left"><i class="fas fa-chevron-left"></i></span>
+      <span class="bouton-slider" id="right"><i class="fas fa-chevron-right"></i></span>
+    </section>
+
+
+    <!-- MAP + INFOS STATION ET RESERVATION -->
+
+    <section id="main">
+      <!-- Map -->
+      <div id="map"></div>
+      <!-- Infos de la station et reservation -->
+      <aside id="formulaire">
+
+        <!-- Infos de la station -->
+        <div class="infos-station">
+          <h2>Détails de la station</h2>
+          <hr />
+          <i class="fas fa-map-marker-alt icone"></i>
+          <p class="nom-station">Sélectionnez une station</p>
+          <hr />
+          <i class="fas fa-map-signs icone"></i>
+          <p class="adresse-station"></p>
+          <hr />
+          <i class="fas fa-bicycle icone"></i>
+          <p class="place-libre"></p>
+          <p class="velo-dispo"></p>
+          <button type="button" class="reserver">Réserver</button>
+        </div>
+
+        <!-- Reservation à la signature -->
+        <div class="reservation" id="reservation">
+          <h3>Signez pour réserver</h3>
+          <hr />
+          <i class="fas fa-pencil-alt"></i>
+          <br />
+          <canvas id="canvas" width="250" height="125"></canvas>
+          <div class="boutons">
+            <button type="button" class="effacer">Effacer</button>
+            <button type="button" class="valider" disabled>Valider</button>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer id="footer">
+        <h3>Réservation</h3>
+        <span class="footer-text">Aucune réservation en cours</span>
+        <p class="timer">
+          <span class="minutes"></span>
+          <span class="secondes"></span>
+        </p>
+        <button type="button" class="annuler">Annuler</button>
+    </footer>
+
+
+    <!-- SCRIPT -->
+
+    <script src="js/jquery.js"></script>
+    <script src="js/ajax.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB4qPKEOypRckuajCMqYCruQuBz1vWFHog&callback=initMap" async defer></script>
+    <script src="js/slider.js"></script>
+    <script src="js/map.js"></script>
+    <script src="js/markerclusterer.js"></script>
+    <script src="js/canvas.js"></script>
+  </div>
+  </body>
+</html>
